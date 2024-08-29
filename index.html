@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <div class="grid">
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+        </nav>
+        <div class="banner">
+            <div id="bannerAd">
+                <img id="banner_scene1_img1" src="./assets/chuttersnap-Dif0JdAIDig-unsplash.jpg" />
+                <div id="adScene1Line1Text">Water world</div>
+            </div>
+            <div>
+                <img id="banner_scene2_img2" src="./assets/Lauren_kids.jpg" />
+                <div id="adScene2Line2Text">Fast Pay Now Online</div>
+                <div id="studentDetails">K. A. Arosh M. Perera <br /> ID 1579940 </div>
+            </div>
+            
+        </div>
+        <main class="main">
+            <h1>Main content</h1>
+            <section>
+                <div class="container-half card">
+
+                    <subtitle class="card-title">Input Forms</subtitle>
+                    <progress value="10" max="100"></progress>
+                    <div id="form-page1" class="form-page" style="display: block">
+                        <div> <!--page title-->
+                            <h3>Booking Details</h3>
+                        </div>
+                        <div> <!--page input fields-->
+                            <lable for="datefAttendence" class="row">
+                                Date of Attendence:
+                                <input type="date" id="date-Attendence" />
+                            </lable>
+                            <lable for="adultCount" class="row">
+                                Number of Adults:
+                                <input type="text" id="adult-count" />
+                            </lable>
+                            <lable for="childCount" class="row">
+                                Number of Children:
+                                <input type="text" id="child-count" />
+                            </lable>
+                        </div>
+                        <div> <!--page nav buttons-->
+                            <button class="Next" type="button" onclick="showPage(2)">
+                                Next Page
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="form-page2" class="form-page" style="display: none">
+                        <div> <!--page title-->
+                            <h3>Personal Details</h3>
+                        </div>
+                        <div> <!--page input fields-->
+                            <lable for="contacttName" class="row">
+                                Contact Name:
+                                <input type="text" id="contact-name" />
+                            </lable>
+                            <lable for="emailAddress" class="row">
+                                Email Address:
+                                <input type="text" id="email-address" />
+                            </lable>
+                        </div>
+                        <div> <!--page nav buttons-->
+                            <button class="previous" type="button" onclick="showPage(1)">
+                                Previous Page
+                            </button>
+                            <button class="Next" type="button" onclick="showPage(3)">
+                                Next Page
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="form-page3" class="form-page" style="display: none">
+                        <div> <!--page title-->
+                            <h3>Ticket Detalis</h3>
+                        </div>
+                        <div> <!--page input fields-->
+                            <div> <!--radio button input-->
+                                <label for="storageLocker-yes">
+                                    <input
+                                        type="radio"
+                                        id="storageLocker-yes"
+                                        name="storage"
+                                        value="yes"
+                                        checked="true"
+                                    />
+                                    Storage Locker Yes
+                                </label>
+                                <label for="storageLocker-no">
+                                    <input
+                                        type="radio"
+                                        id="storageLocker-no"
+                                        name="storage"
+                                        value="no"
+                                    />
+                                    Storage Locker No
+                                </label>
+                                <label for="colorpick" class="row">
+                                    Ticket Color:
+                                    <input type="color" id="color-pick" />
+                                </label>
+                            </div>
+                        </div>
+                        <div> <!--page nav buttons-->
+                            <button class="previous" type="button" onclick="showPage(2)">
+                                Previous Page
+                            </button>
+                            <button class="next" type="button" onclick="showPage(4)">
+                                Next Page
+                            </button>
+                        </div>
+                    </div>
+
+                    
+                    <div id="form-page4" class="form-page" style="display: none">
+                        <div>
+                            <h3>Terms & Conditions</h3>
+                        </div>
+                        <div> <!--page data fields-->
+                            <lable for="tc" class="row">
+                                I agreed to the terms & Conditiond:
+                                <input type="checkbox" id="t-c" />
+                            </lable>
+                        </div>
+                        <div> <!--page nav buttons-->
+                            <button class="previous" type="button" onclick="showPage(3)">
+                                previous Page
+                            </button>
+                            <button class="Next" type="button" onclick="showPage(5)">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="form-page5" class="form-page" style="display: none">
+                        <div>
+                            <h3>Summary</h3>
+                        </div>
+                        <div> <!--page data fields-->
+                            <div class="row">
+                                Contact Name: <span id="summary-name"></span>
+                            </div>
+                            <div class="row">
+                                Email Address: <span id="summary-email"></span>
+                            </div>
+                            <div class="row">
+                                Booking date: <span id="summary-date"></span>
+                            </div>
+                            <div class="row">
+                                Number of Adults: <span id="summary-adults"></span>
+                            </div>
+                            <div class="row">
+                                Number of Children: <span id="summary-children"></span>
+                            </div>
+                            <div class="row">
+                                Storage Locker: <span id="summary-locker"></span>
+                            </div>
+                            <div class="row">
+                                Ticket Color: <span id="summary-color"></span>
+                            </div>
+                        </div>
+                        <!--
+                        <div> 
+                            <button class="previous" type="button" onclick="showPage(4)">
+                                previous Page
+                            </button>
+                            <button class="next" type="button" onclick="submitData()">
+                                Submit
+                            </button>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="sidebar">
+            <div id="sidebarAd"></div>
+        </div>
+    </div>
+
+</body>
+<script src="./app.js"></script>
+
+</html>
